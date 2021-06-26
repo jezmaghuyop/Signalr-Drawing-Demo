@@ -3,7 +3,7 @@
 A simple SignalR application that allows the user to draw on a HTML5 canvas and broadcast it to everyone connected to the same hub.
 
 **Technology Used:**
-- SignalR Core
+- .NET SignalR Core
 - Html/CSS
 - Javascript
 
