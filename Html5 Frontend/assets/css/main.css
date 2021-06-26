@@ -1,0 +1,71 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    cursor: none;
+    font-family: aktiv-grotesk-extended, sans-serif;
+}
+
+.main-container {
+    text-align: center;
+}
+
+#chalkboard {
+    width: 1800px;
+    height: 600px;
+    background: url('../images/board.png');
+    border-radius: 10px;
+    border: #B78240 solid 10px;
+}
+
+#chalkboard:hover {
+    cursor: url('../images/chalk.png'), auto;
+}
+
+.button {
+    pointer-events: auto;
+    cursor: pointer;
+    background: #e7e7e7;
+    border: none;
+    padding: 1.5rem 3rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.button::before,
+.button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.button--pan {
+    font-weight: 700;
+    border: 2px solid #000;
+    border-radius: 3rem;
+    overflow: hidden;
+    color: #fff;
+}
+
+.button--pan span {
+    position: relative;
+    mix-blend-mode: difference;
+}
+
+.button--pan::before {
+    content: '';
+    background: #000;
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.button--pan:hover::before {
+    transform: translate3d(0, -100%, 0);
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignalR Drawing</title>
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.0-preview.5.21301.17/signalr.min.js"
+        integrity="sha512-LMfR199bD2qQJO3NKIxWnXitA9QplFCyxShD0+jXrqZtar46i8u9+a1dTHhRoTEpz2TfK+Q5h0+xdPMpdFICmQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.7/signalr.js"
+        integrity="sha512-VZ+fgIWmNx03fl/L+pZEdtGkBMLy+XPneNvXEQTStmaH+BPmy7jwW80+Rh5MfrowpRywUDoYJwwHX7K9YrG3fw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+
+<body>
+    <div class="main-container">
+        <h1>This is a Realtime Drawing Demo</h1>
+
+        <p style="margin-left: 50px;">Coordinates: X = <span id="xCoor">0</span> | Y = <span id="yCoor">0</span></p>
+
+        <br />
+
+        <canvas id="chalkboard" width="1800" height="600">Below you can write:</canvas>
+
+        <br />
+
+        <button id="clearBtn" class="button button--pan"><span>Clear Board</span></button>
+    </div>
+
+
+
+    <script src="./assets/scripts/draw.js"></script>
+</body>
+
+</html>
